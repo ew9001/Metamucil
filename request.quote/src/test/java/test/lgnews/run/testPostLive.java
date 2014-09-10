@@ -194,7 +194,7 @@ public class testPostLive {
 	 public WebDriver mobileLGnexus4() throws MalformedURLException  
 	 {  
 	  
-		 browser_type="chrome";
+		 browser_type="mobileLGnexus4";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
