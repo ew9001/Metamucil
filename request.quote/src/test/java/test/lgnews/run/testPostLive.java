@@ -207,7 +207,7 @@ public class testPostLive {
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Sony Xperia Tipo");
-
+		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -267,6 +267,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("platform", "ANDROID");
 		 iPhoneCaps.setCapability("device", "LG Nexus 4");
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");

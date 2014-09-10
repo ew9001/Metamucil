@@ -4,7 +4,7 @@
 <suite name="Examples" verbose="1">
     <parameter name="param" value="Laramie"/>
     <test name="ObjectExitTest simple example">
-        <parameter name="browser" value="mobileLGnexus4"/>
+        <parameter name="browser" value="mobileXperia"/>
         <classes>
             <class name="test.lgnews.run.testPostLive"/>
         </classes>
