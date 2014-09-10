@@ -195,7 +195,7 @@ public class testPostLive {
 	 public WebDriver mobileLGnexus4() throws MalformedURLException  
 	 {  
 	  
-		 browser_type="mobileLGnexus4";
+		 browser_type="mobileXperia";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
@@ -239,6 +239,27 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("device", "iPhone 5");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
+		    
+	      System.out.println("Let me run iPhone 5S");
+	      driver.get("http://m.crest.com/25235235");
+
+	      driver.get("http://yandex.com");
+	      
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver mobileLGNexus4() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="LG Nexus 4";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
+		 iPhoneCaps.setCapability("browserName", "android");
+		 iPhoneCaps.setCapability("platform", "ANDROID");
+		 iPhoneCaps.setCapability("device", "LG Nexus 4");
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
