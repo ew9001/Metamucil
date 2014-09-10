@@ -58,6 +58,7 @@ public class testPostLive {
 		  else if (browser.equals("mobileLGnexus4")) {
 			  driver=mobileLGnexus4();
 			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
 			}
 		  
 		  else if (browser.equals("mobileiPhone5S")) {
