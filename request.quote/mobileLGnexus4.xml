@@ -1,11 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
  
 <suite name="Examples" verbose="1">
-    <parameter name="param" value="Laramie"/>
+    <parameter name="param" value="Laramies"/>
     <test name="ObjectExitTest simple example">
         <parameter name="browser" value="mobileLGnexus4"/>
         <classes>
-            <class name="test.mobile.site.mobileTest"/>
+            <class name="test.mobile.site.testPostLive"/>
         </classes>
  
         <groups>
