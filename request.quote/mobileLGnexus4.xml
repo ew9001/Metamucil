@@ -2,6 +2,7 @@
  
 <suite name="Examples" verbose="1">
     <parameter name="param" value="Laramies"/>
+    
     <test name="ObjectExitTest simple example">
         <parameter name="browser" value="mobileLGnexus4"/>
         <classes>
@@ -13,6 +14,19 @@
                 <include name="create"/>
             </run>
         </groups>
+        
+    <test name="ObjectExitTest simple example">
+        <parameter name="browser" value="mobileXperia"/>
+        <classes>
+            <class name="test.lgnews.run.testPostLive"/>
+        </classes>
+ 
+        <groups>
+            <run>
+                <include name="create"/>
+            </run>
+        </groups>
+        
     </test>
     
 </suite>

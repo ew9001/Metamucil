@@ -56,7 +56,13 @@ public class testPostLive {
 		  
 
 		  else if (browser.equals("mobileLGnexus4")) {
-			  driver=mobileLGnexus4();
+			  driver=mobileLGNexus4();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
+		  else if (browser.equals("mobileXperia")) {
+			  driver=mobileXperia();
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
@@ -192,7 +198,7 @@ public class testPostLive {
 	
 
 
-	 public WebDriver mobileLGnexus4() throws MalformedURLException  
+	 public WebDriver mobileXperia() throws MalformedURLException  
 	 {  
 	  
 		 browser_type="mobileXperia";
