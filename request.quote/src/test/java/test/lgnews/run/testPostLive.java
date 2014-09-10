@@ -199,7 +199,7 @@ public class testPostLive {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "LG Nexus 4");
+		 caps.setCapability("device", "Sony Xperia Tipo");
 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
