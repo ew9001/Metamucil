@@ -76,6 +76,11 @@ public class testPostLive {
 			  driver=metamuciliPhone4S();
 			  csvFileToRead = data;
 			}
+		  
+		  else if (browser.equals("mobileHTCEveo3d")) {
+			  driver=mobileHTCEveo3d();
+			  csvFileToRead = data;
+			}
 		 
 		  
 		  else if (browser.equals("safari")) {
@@ -272,6 +277,26 @@ public class testPostLive {
 		    
 	      System.out.println("Let me run iPhone 5S");
 	      driver.get("http://m.crest.com/25235235");
+
+	      driver.get("http://yandex.com");
+	      
+	      
+	      return driver;
+	 }
+	 public WebDriver mobileHTCEveo3d() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="mobileHTCEveo3d";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = DesiredCapabilities.iphone();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "HTC Evo 3D");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+		    
+	      System.out.println("Let me run HTC Eveo 3D");
+	      driver.get("http://m.crest.com");
 
 	      driver.get("http://yandex.com");
 	      
