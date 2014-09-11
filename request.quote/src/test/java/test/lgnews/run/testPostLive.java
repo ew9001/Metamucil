@@ -140,6 +140,7 @@ public class testPostLive {
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
