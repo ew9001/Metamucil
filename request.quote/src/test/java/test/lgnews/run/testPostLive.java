@@ -387,7 +387,7 @@ public class testPostLive {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
-	  
+	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		   
 		    myTitle = driver.getTitle();
