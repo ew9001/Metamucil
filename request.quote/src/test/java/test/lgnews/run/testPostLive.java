@@ -135,11 +135,11 @@ public class testPostLive {
 		        // nextLine[] is an array of values from the line
 		        System.out.println(nextLine[lineNumber]);
 		        url=nextLine[lineNumber];
-		        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
