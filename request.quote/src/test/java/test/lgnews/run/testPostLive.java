@@ -103,7 +103,10 @@ public class testPostLive {
 			  driver=mobileGalaxyNexus();
 			  csvFileToRead = data;
 			}
-		 
+		  else if (browser.equals("mobileAtrixHD")) {
+			  driver=mobileAtrixHD();
+			  csvFileToRead = data;
+			}
 		  
 		  else if (browser.equals("safari")) {
 			  driver=browserSafari();
@@ -258,6 +261,23 @@ public class testPostLive {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazor");
+	      driver.get("http://m.yahoo.com");
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver mobileAtrixHD() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="mobileRazor";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Motorola Atrix HD");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run mobileAtrixHD");
 	      driver.get("http://m.yahoo.com");
 	      
 	      return driver;
