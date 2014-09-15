@@ -93,6 +93,11 @@ public class testPostLive {
 			  driver=mobileHTCEveo3d();
 			  csvFileToRead = data;
 			}
+		  
+		  else if (browser.equals("mobileGalaxyNote2")) {
+			  driver=mobileGalaxyNote2();
+			  csvFileToRead = data;
+			}
 		 
 		  
 		  else if (browser.equals("safari")) {
@@ -263,6 +268,23 @@ public class testPostLive {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazorHD");
+	     
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver mobileGalaxyNote2() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="GalaxyNote2";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Samsung Galaxy Note II");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run GalaxyNote2");
 	     
 	      
 	      return driver;
