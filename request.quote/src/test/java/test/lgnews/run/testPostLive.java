@@ -60,6 +60,12 @@ public class testPostLive {
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
+
+		  else if (browser.equals("mobileRazor")) {
+			  driver=mobileRazor();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
 		  
 		  else if (browser.equals("mobileXperia")) {
 			  driver=mobileXperia();
@@ -218,6 +224,23 @@ public class testPostLive {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver mobileRazor() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="mobileRazor";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Motorola Razr Maxx HD");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run mobileRazor");
+	      driver.get("http://m.yahoo.com");
 	      
 	      return driver;
 	 }
