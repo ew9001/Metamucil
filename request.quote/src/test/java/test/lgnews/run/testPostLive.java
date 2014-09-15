@@ -98,6 +98,11 @@ public class testPostLive {
 			  driver=mobileGalaxyNote2();
 			  csvFileToRead = data;
 			}
+		  
+		  else if (browser.equals("mobileGalaxyNexus")) {
+			  driver=mobileGalaxyNexus();
+			  csvFileToRead = data;
+			}
 		 
 		  
 		  else if (browser.equals("safari")) {
@@ -163,7 +168,8 @@ public class testPostLive {
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        counter+=1;
 		    
 
@@ -354,6 +360,28 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver mobileGalaxyNexus() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="LG Nexus 4";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = DesiredCapabilities.iphone();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Samsung Galaxy Nexus");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+		    
+	      System.out.println("Let me run mobileGalaxyNexus");
+	 
+
+	      driver.get("http://m.espn.com");
+	      
+	      
+	      return driver;
+	 }
+	 
 	 public WebDriver mobileHTCEveo3d() throws MalformedURLException  
 	 {  
 	  
