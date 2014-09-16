@@ -68,7 +68,7 @@ public class testPostLive {
 			}
 		  
 		  else if (browser.equals("tabletKindleFireHD")) {
-			  driver=  tabletKindleFire2();
+			  driver=  tabletKindleFireHD();
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
