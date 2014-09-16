@@ -381,6 +381,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		 iPhoneCaps.setCapability("version","7.0");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
@@ -464,6 +465,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("browserName", "iPhone");
 		 iPhoneCaps.setCapability("platform", "MAC");
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
+		 iPhoneCaps.setCapability("version","7.0");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		
