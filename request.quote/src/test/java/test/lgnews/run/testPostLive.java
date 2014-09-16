@@ -403,9 +403,8 @@ public class testPostLive {
 		 caps.setCapability("device", "Motorola Atrix HD");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run mobileAtrixHD");
-	      driver.get("http://m.yahoo.com");
-	      
+	      System.out.println("Let me run mobile AtrixHD");
+	     
 	      return driver;
 	 }
 	 
