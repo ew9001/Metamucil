@@ -183,7 +183,7 @@ public class testPostLive {
 		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S"))
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 700)"); //y value '250' can be altered
+		        jse.executeScript("scroll(0, 3700)"); //y value '250' can be altered
 		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
 				        System.out.println("Image Name " +name);
