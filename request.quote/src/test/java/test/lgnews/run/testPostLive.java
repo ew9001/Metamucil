@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -178,6 +179,16 @@ public class testPostLive {
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        
+		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S"))
+		        {
+		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
+		        jse.executeScript("scroll(0, 200)"); //y value '250' can be altered
+		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
+				        System.out.println("Image Name " +name);
+				        takeScreenPortrait(name);
+		        }
 		        counter+=1;
 		    
 
@@ -394,10 +405,10 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
-	      System.out.println("Let me run iPhone 5S");
-	      driver.get("http://m.crest.com/25235235");
+	      System.out.println("Let me run LG Nexus 4");
+	      driver.get("http://m.crest.com");
 
-	      driver.get("http://yandex.com");
+	      
 	      
 	      
 	      return driver;
