@@ -365,7 +365,7 @@ public class testPostLive {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Samsung Galaxy Note 10.1");
+		 caps.setCapability("device", "Amazon Kindle Fire HD 8.9");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFireHD");
 	      driver.get("http://m.yahoo.com");
@@ -381,7 +381,7 @@ public class testPostLive {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Amazon Kindle Fire HD 8.9");
+		 caps.setCapability("device", "Samsung Galaxy Note 10.1");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFireHD");
 	     
