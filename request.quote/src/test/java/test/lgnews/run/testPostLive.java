@@ -67,6 +67,12 @@ public class testPostLive {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("tabletKindleFireHD")) {
+			  driver=  tabletKindleFire2();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
 		
 		  
 		  else if (browser.equals("mobileRazor")) {
@@ -187,7 +193,7 @@ public class testPostLive {
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("tabletKindleFire2"))
+		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
@@ -322,7 +328,21 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
-	 
+	 public WebDriver tabletKindleFireHD() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletKindleFireHD";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Amazon Kindle Fire HD 8.9");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletKindleFireHD");
+	      driver.get("http://m.yahoo.com");
+	      
+	      return driver;
+	 }
 	 
 	 public WebDriver mobileAtrixHD() throws MalformedURLException  
 	 {  
