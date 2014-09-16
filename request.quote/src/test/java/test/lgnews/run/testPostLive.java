@@ -465,7 +465,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("browserName", "iPhone");
 		 iPhoneCaps.setCapability("platform", "MAC");
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
-		 iPhoneCaps.setCapability("version","7.0");
+		 iPhoneCaps.setCapability("sdkVersion", "7.0");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		
