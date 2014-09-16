@@ -84,6 +84,11 @@ public class testPostLive {
 			   csvFileToRead = data;
 			}
 		  
+		  else if (browser.equals("mobileHTCOneX")) {
+			  driver=mobileHTCOneX();
+			   csvFileToRead = data;
+			}
+		  
 		  else if (browser.equals("metamuciliPhone4S")) {
 			  driver=metamuciliPhone4S();
 			  csvFileToRead = data;
@@ -249,6 +254,23 @@ public class testPostLive {
 	      return driver;
 	 }
 	 
+	 public WebDriver  mobileHTCOneX() throws MalformedURLException  
+	 {  
+	  
+		 browser_type=" mobileHTCOneX";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "HTC One X");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Chrome");
+	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	 }
+	 
 	 public WebDriver mobileRazor() throws MalformedURLException  
 	 {  
 	  
@@ -269,7 +291,7 @@ public class testPostLive {
 	 public WebDriver mobileAtrixHD() throws MalformedURLException  
 	 {  
 	  
-		 browser_type="mobileRazor";
+		 browser_type="mobileAtrixHD";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
