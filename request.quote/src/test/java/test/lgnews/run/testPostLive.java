@@ -368,7 +368,35 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
-	 
+	 public WebDriver mobileiPhone4S() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="iPhone4S";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities  iPhoneCaps = new DesiredCapabilities();
+		
+		
+		 
+		 iPhoneCaps.setCapability("browserName", "iPhone");
+		 iPhoneCaps.setCapability("platform", "MAC");
+		 iPhoneCaps.setCapability("device", "iPhone 4S");
+		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		 
+
+
+		 
+		    driver = new RemoteWebDriver(new URL(URL),  iPhoneCaps);
+		    
+	      System.out.println("Let me run iPhone 4S");
+	     
+
+	      driver.get("http://yandex.com");
+	      
+	      
+	      return driver;
+	 }
 	 public WebDriver mobileiPhone5S() throws MalformedURLException  
 	 {  
 	  
@@ -456,29 +484,7 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
-	 public WebDriver mobileiPhone4S() throws MalformedURLException  
-	 {  
-	  
-		 browser_type="iPhone5S";
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
-		 iPhoneCaps.setCapability("browserName", "iPhone");
-		 iPhoneCaps.setCapability("platform", "MAC");
-		 iPhoneCaps.setCapability("device", "iPhone 4S");
-		 iPhoneCaps.setCapability("sdkVersion", "7.0");
-		 iPhoneCaps.setCapability("browserstack.debug", "true");
-		 iPhoneCaps.setCapability("rotatable", true);
-		
-		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
-		    
-	      System.out.println("Let me run iPhone 5S");
-	      driver.get("http://m.crest.com/25235235");
-
-	      driver.get("http://yandex.com");
-	      
-	      
-	      return driver;
-	 }
+	 
 	 public WebDriver browserSafari() throws MalformedURLException  
 	 {  
 	  
