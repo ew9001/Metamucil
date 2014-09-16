@@ -90,8 +90,8 @@ public class testPostLive {
 			   csvFileToRead = data;
 			}
 		  
-		  else if (browser.equals("metamuciliPhone4S")) {
-			  driver=metamuciliPhone4S();
+		  else if (browser.equals("mobileiPhone4S")) {
+			  driver=mobileiPhone4S();
 			  csvFileToRead = data;
 			}
 		  
@@ -183,7 +183,7 @@ public class testPostLive {
 		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S"))
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 200)"); //y value '250' can be altered
+		        jse.executeScript("scroll(0, 700)"); //y value '250' can be altered
 		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
 				        System.out.println("Image Name " +name);
@@ -455,7 +455,7 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
-	 public WebDriver metamuciliPhone4S() throws MalformedURLException  
+	 public WebDriver mobileiPhone4S() throws MalformedURLException  
 	 {  
 	  
 		 browser_type="iPhone5S";
