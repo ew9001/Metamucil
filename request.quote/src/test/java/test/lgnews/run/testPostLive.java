@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -195,15 +196,17 @@ public class testPostLive {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        for (int second = 0;; second++) {
+			    	if (second >= 60);
+			    	try { if ("©2014 Procter & Gamble. All Rights Reserved. All copy and claims valid only in the U.S. This website is intended for U.S. residents only.".equals(driver.findElement(By.cssSelector("div.cpytext")).getText())) break; } catch (Exception e) {}
+			    	Thread.sleep(1000);
+			    }
+
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		       
 		        
 		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
