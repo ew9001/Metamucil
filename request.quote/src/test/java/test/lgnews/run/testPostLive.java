@@ -369,6 +369,55 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver tabletIpadAir() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletIpadAir";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "iPad");
+		 caps.setCapability("platform", "MAC");
+		 caps.setCapability("device", "iPad Air");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletIpadAir");
+	    
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver tabletIpadRetina() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletGoogleNexus";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "iPad");
+		 caps.setCapability("platform", "MAC");
+		 caps.setCapability("device", "iPad mini Retina");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletIpadRetina");
+	   
+	      return driver;
+	 }
+	 
+	 public WebDriver tabletIpad4thGen7() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletIpad4thGen7";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "iPad");
+		 caps.setCapability("platform", "MAC");
+		 caps.setCapability("device", "iPad 4th Gen");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletIpad4thGen7");
+	      
+	      
+	      return driver;
+	 }
 	 public WebDriver tabletKindleFireHD() throws MalformedURLException  
 	 {  
 	  
