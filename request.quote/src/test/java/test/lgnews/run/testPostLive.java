@@ -198,7 +198,7 @@ public class testPostLive {
 		        driver.get(url);
 		        for (int second = 0;; second++) {
 			    	if (second >= 60);
-			    	try { if ("©2014 Procter & Gamble. All Rights Reserved. All copy and claims valid only in the U.S. This website is intended for U.S. residents only.".equals(driver.findElement(By.cssSelector("div.cpytext")).getText())) break; } catch (Exception e) {}
+			    	try { if ("© 2014. Procter & Gamble. All rights reserved. All claims valid only in the US.\nP&G. Proud Partner of the U.S. Olympic Team. 36 USC 220508".equals(driver.findElement(By.cssSelector("div.copyRights > div.text.mode1 > div")).getText())) break; } catch (Exception e) {}
 			    	Thread.sleep(1000);
 			    }
 
