@@ -87,6 +87,12 @@ public class testPostLive {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("tabletSamsungGalaxyNote10")) {
+			  driver=tabletSamsungGalaxyNote10();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
 		  else if (browser.equals("mobileRazorHD")) {
 			  driver=mobileRazorHD();
 			  csvFileToRead = data2;
@@ -363,6 +369,22 @@ public class testPostLive {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFireHD");
 	      driver.get("http://m.yahoo.com");
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver tabletSamsungGalaxyNote10() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletSamsungGalaxyNote10";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Amazon Kindle Fire HD 8.9");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletKindleFireHD");
+	     
 	      
 	      return driver;
 	 }
