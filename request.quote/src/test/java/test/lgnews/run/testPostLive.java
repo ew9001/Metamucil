@@ -173,6 +173,18 @@ public class testPostLive {
 			  driver=browserAndroid();
 			}
 		  
+		  else if (browser.equals(" tabletIpadRetina")) {
+			  driver= tabletIpadRetina();
+			}
+		  
+		  else if (browser.equals("tabletIpadAir")) {
+			  driver=tabletIpadAir();
+			}
+		  
+		  else if (browser.equals("tabletIpad4thGen7")) {
+			  driver=tabletIpad4thGen7();
+			}
+		  
 		  String name=""+ browser+"/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		 
 			  System.out.println("Let me see which one get tested " +browser);
@@ -413,7 +425,7 @@ public class testPostLive {
 		 caps.setCapability("device", "iPad 4th Gen");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run tabletIpad4thGen7");
+	      System.out.println("Let me run in tabletIpad4thGen7");
 	      
 	      
 	      return driver;
