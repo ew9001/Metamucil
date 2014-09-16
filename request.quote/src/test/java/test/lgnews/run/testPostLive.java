@@ -87,10 +87,10 @@ public class testPostLive {
 			  System.out.println("Data is  " +data2);
 			}
 		  
-		  else if (browser.equals("tabletSamsungGalaxyNote10")) {
-			  driver=tabletSamsungGalaxyNote10();
-			  csvFileToRead = data2;
-			  System.out.println("Data is  " +data2);
+		  else if (browser.equals("tabletSamsungGalaxyNote")) {
+			  driver=tabletSamsungGalaxyNote();
+			  csvFileToRead = data;
+			  System.out.println("Data is  " +data);
 			}
 		  
 		  else if (browser.equals("mobileRazorHD")) {
@@ -373,7 +373,7 @@ public class testPostLive {
 	      return driver;
 	 }
 	 
-	 public WebDriver tabletSamsungGalaxyNote10() throws MalformedURLException  
+	 public WebDriver tabletSamsungGalaxyNote() throws MalformedURLException  
 	 {  
 	  
 		 browser_type="tabletSamsungGalaxyNote10";
