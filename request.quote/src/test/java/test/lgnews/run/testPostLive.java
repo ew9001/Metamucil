@@ -111,6 +111,11 @@ public class testPostLive {
 			   csvFileToRead = data;
 			}
 		  
+		  else if (browser.equals("mobileiPhone5")) {
+			  driver=mobileiPhone5();
+			   csvFileToRead = data;
+			}
+		  
 		  else if (browser.equals("mobileiPhone5C")) {
 			  driver=mobileiPhone5C();
 			   csvFileToRead = data;
@@ -213,7 +218,7 @@ public class testPostLive {
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		       
 		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
+		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
@@ -272,7 +277,6 @@ public class testPostLive {
 	      driver.get("http://m.crest.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
-	      driver.get("http://crest.com");
 	      return driver;
 	   
 	    
@@ -510,9 +514,28 @@ public class testPostLive {
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
-	      driver.get("http://m.crest.com/25235235");
-
-	      driver.get("http://yandex.com");
+	    
+	      
+	      
+	      return driver;
+	 }
+	 public WebDriver mobileiPhone5() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="iPhone5";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
+		 iPhoneCaps.setCapability("browserName", "iPhone");
+		 iPhoneCaps.setCapability("platform", "MAC");
+		 iPhoneCaps.setCapability("device", "iPhone 5");
+		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		
+		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
+		    
+	      System.out.println("Let me run iPhone 5");
+	      
 	      
 	      
 	      return driver;
