@@ -61,7 +61,14 @@ public class testPostLive {
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
-
+		  else if (browser.equals("tabletKindleFire2")) {
+			  driver=  tabletKindleFire2();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
+		
+		  
 		  else if (browser.equals("mobileRazor")) {
 			  driver=mobileRazor();
 			  csvFileToRead = data2;
@@ -298,6 +305,24 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver tabletKindleFire2() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletKindleFire2";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Amazon Kindle Fire 2");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletKindleFire2");
+	      driver.get("http://m.yahoo.com");
+	      
+	      return driver;
+	 }
+	 
 	 
 	 public WebDriver mobileAtrixHD() throws MalformedURLException  
 	 {  
