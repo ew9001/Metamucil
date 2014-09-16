@@ -73,6 +73,12 @@ public class testPostLive {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("tabletGoogleNexus")) {
+			  driver=  tabletGoogleNexus();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
 		
 		  
 		  else if (browser.equals("mobileRazor")) {
@@ -324,6 +330,23 @@ public class testPostLive {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFire2");
+	      driver.get("http://m.yahoo.com");
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver tabletGoogleNexus() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="tabletGoogleNexus";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Google Nexus 7");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletGoogleNexus");
 	      driver.get("http://m.yahoo.com");
 	      
 	      return driver;
