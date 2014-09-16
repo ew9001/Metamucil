@@ -265,8 +265,8 @@ public class testPostLive {
 		 caps.setCapability("device", "HTC One X");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      System.out.println("Let me run mobileHTCOneX");
+	      driver.get("http://google.com");
 	      
 	      return driver;
 	 }
