@@ -426,7 +426,7 @@ public class testPostLive {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run in tabletIpad4thGen7");
-	      driver.get("http://yahoo.com");
+	     
 	      
 	      
 	      return driver;
