@@ -495,7 +495,8 @@ public class Rotate {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazorHD");
-	     
+	      ((AndroidDriver)driver).getOrientation();
+	      ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
 	      
 	      return driver;
 	 }
@@ -781,8 +782,7 @@ public class Rotate {
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
-	     ((AndroidDriver)driver).getOrientation();
-		    ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
+	    
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		  
 		    myTitle = driver.getTitle();
