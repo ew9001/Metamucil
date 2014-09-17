@@ -237,6 +237,7 @@ public class Rotate {
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
+		        jse.executeScript("mobile:orientation", "LANDSCAPE");
 		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
 				        System.out.println("Image Name " +name);
@@ -495,8 +496,15 @@ public class Rotate {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazorHD");
-	      ((AndroidDriver)driver).getOrientation();
-	      ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
+	      driver.rotate(ScreenOrientation.LANDSCAPE);
+	      
+	      driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 	      
 	      return driver;
 	 }
