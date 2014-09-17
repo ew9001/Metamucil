@@ -233,7 +233,7 @@ public class Rotate {
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		       
 		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
+		        if (browser.equals("mobileRazorHD")||browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
