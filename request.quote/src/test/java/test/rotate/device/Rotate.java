@@ -780,12 +780,14 @@ public class Rotate {
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	     System.out.println("I want to rotate");
+	     ((AndroidDriver)driver).getOrientation();
+		    ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		  
 		    myTitle = driver.getTitle();
-		    ((AndroidDriver)driver).getOrientation();
-		    ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
-		    System.out.println("I want to rotate");
+		    
+		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
