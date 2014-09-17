@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.ScreenOrientation;
@@ -73,6 +74,12 @@ public class Rotate {
 		  
 		  else if (browser.equals("tabletKindleFireHD")) {
 			  driver=  tabletKindleFireHD();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
+		  else if (browser.equals("ie10")) {
+			  driver=  ie10();
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
@@ -209,45 +216,19 @@ public class Rotate {
 		    int lineNumber = 0;
 
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
+		    driver.get("http://10.10.18.53/");
+		    driver.findElement(By.id("user_pass")).clear();
+		    driver.findElement(By.id("user_pass")).sendKeys("Urgr8!1978");
+		    driver.findElement(By.id("user_login")).clear();
+		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
+		    driver.findElement(By.id("wp-submit")).click();
+		    driver.manage().window().setSize(new Dimension(585, 1024));
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
-		    while ((line = br.readLine()) != null) {
-		  	  
-		        System.out.println("The URL is " + counter);
-		        String [] nextLine = line.split(",");
-		        // nextLine[] is an array of values from the line
-		        System.out.println(nextLine[lineNumber]);
-		        url=nextLine[lineNumber];
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        System.out.println("The URL is " + url);	
-		        System.out.println("Image Name " +name);
-		        driver.get(url);
-		        for (int second = 0;; second++) {
-			    	if (second >= 60);
-			    	try { if ("© 2014. Procter & Gamble. All rights reserved. All claims valid only in the US.\nP&G. Proud Partner of the U.S. Olympic Team. 36 USC 220508".equals(driver.findElement(By.cssSelector("div.copyRights > div.text.mode1 > div")).getText())) break; } catch (Exception e) {}
-			    	Thread.sleep(1000);
-			    }
-
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		       
-		        
-		        if (browser.equals("mobileRazorHD")||browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
-		        {
-		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
-		        System.out.println("Let me rotate ");
-		        jse.executeScript("mobile:orientation", "LANDSCAPE");
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
 				        System.out.println("Image Name " +name);
 				        takeScreenPortrait(name);
-		        }
-		        counter+=1;
-		    
-
-		      }
+		       
 	
 		 
 	    	 driver.quit();   
@@ -299,6 +280,31 @@ public class Rotate {
 	    
 	      
 	 }  
+	 
+	 public WebDriver ie10() throws MalformedURLException  
+	 {  
+	  
+		 System.out.println("Let me run ie10");
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "IE");
+		 caps.setCapability("browser_version", "10.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run ie10");
+	      browser_type="mobileGalaxyS3";
+	      System.out.println("Let me see which one get tested" +browser_type);
+	      System.out.println("Let me see which one get tested" +driver);
+	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	      System.out.println(data);
+	      return driver;
+	   
+	    
+	      
+	 }  
+	
 	
 
 
