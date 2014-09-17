@@ -425,7 +425,7 @@ public class testPostLive {
 		 caps.setCapability("device", "iPad 4th Gen");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run in tabletIpad4thGen7");
+	      System.out.println("Let me run in tablet Ipad4thGen7");
 	     
 	      
 	      
