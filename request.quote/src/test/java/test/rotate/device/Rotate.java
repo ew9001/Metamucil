@@ -785,7 +785,7 @@ public class Rotate {
 		    myTitle = driver.getTitle();
 		    ((AndroidDriver)driver).getOrientation();
 		    ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
-		    
+		    System.out.println("I want to rotate");
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
