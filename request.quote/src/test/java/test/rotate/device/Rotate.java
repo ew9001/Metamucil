@@ -496,7 +496,7 @@ public class Rotate {
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazorHD");
-	      driver.rotate(ScreenOrientation.LANDSCAPE);
+	      
 	      
 	      driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
