@@ -237,6 +237,7 @@ public class Rotate {
 		        {
 		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
+		        System.out.println("Let me rotate ");
 		        jse.executeScript("mobile:orientation", "LANDSCAPE");
 		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
