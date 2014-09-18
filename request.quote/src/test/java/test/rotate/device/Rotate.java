@@ -742,7 +742,7 @@ public class Rotate {
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("10.10.18.53", "true");
-		 caps.setCapability("acceptSslCerts", "true");
+		 //caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
 	      //driver.get("http://espn.com");
