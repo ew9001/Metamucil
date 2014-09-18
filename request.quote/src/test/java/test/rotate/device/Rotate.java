@@ -231,12 +231,12 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
 		    while (count < 11) {
-		    	   y+=10;
+		    	   x+=10;
 		    	   
 		    	   System.out.println("X is  " +x);
 		    	   System.out.println("Y is  " +y);
-		    
-		    driver.manage().window().setPosition(new Point(x, y));
+		    driver.manage().window().setSize(new Dimension(x, y));
+		  
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
@@ -760,6 +760,7 @@ public class Rotate {
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.debug", "true");
 		 //caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
