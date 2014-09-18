@@ -741,7 +741,7 @@ public class Rotate {
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
-		 caps.setCapability("browserstack.uat.metawellness.pgsitecore.com", "true");
+		 caps.setCapability("10.10.18.53", "true");
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
