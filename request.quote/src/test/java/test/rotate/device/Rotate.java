@@ -233,7 +233,7 @@ public class Rotate {
 		    driver.manage().window().setSize(new Dimension(x, y));
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
+		    name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
 				        System.out.println("Image Name " +name);
 				        takeScreenPortrait(name);
 				        y+=10;
