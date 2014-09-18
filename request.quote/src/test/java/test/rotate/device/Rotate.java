@@ -231,10 +231,14 @@ public class Rotate {
 		    driver.findElement(By.id("wp-submit")).click();
 		    while (count < 11) {
 		    	   y+=10;
+		    	   
+		    	   System.out.println("X is  " +x);
+		    	   System.out.println("Y is  " +y);
 		    driver.manage().window().setSize(new Dimension(x, y));
-		    driver.manage().window().setSize(new Dimension(x, y));
-		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
 				        System.out.println("Image Name " +name);
 				        takeScreenPortrait(name);
