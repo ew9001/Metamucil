@@ -216,7 +216,7 @@ public class Rotate {
 		    int lineNumber = 0;
 
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
-		    driver.get("http://10.10.18.53:80");
+		    driver.get("http://uat.metawellness.pgsitecore.com");
 		    driver.findElement(By.id("user_pass")).clear();
 		    driver.findElement(By.id("user_pass")).sendKeys("Urgr8!1978");
 		    driver.findElement(By.id("user_login")).clear();
