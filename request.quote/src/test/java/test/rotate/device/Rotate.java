@@ -216,7 +216,7 @@ public class Rotate {
 		    int lineNumber = 0;
 
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
-		    driver.get("https://uat.metawellness.pgsitecore.com");
+		    driver.get("http://uat.metawellness.pgsitecore.com");
 		    driver.findElement(By.id("user_pass")).clear();
 		    driver.findElement(By.id("user_pass")).sendKeys("Urgr8!1978");
 		    driver.findElement(By.id("user_login")).clear();
@@ -745,7 +745,7 @@ public class Rotate {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
-	      driver.get("http://espn.com");
+	      //driver.get("http://espn.com");
 	      
 	      return driver;
 	   
