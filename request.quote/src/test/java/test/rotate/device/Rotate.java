@@ -230,8 +230,9 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
 		    while (count < 11) {
+		    	   y+=10;
 		    driver.manage().window().setSize(new Dimension(x, y));
-		    y+=10;
+		    driver.manage().window().setSize(new Dimension(x, y));
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		    name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
