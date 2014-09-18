@@ -745,7 +745,7 @@ public class Rotate {
 		 //caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
-	      //driver.get("http://espn.com");
+	      driver.get("http://10.10.18.53/wordpress/wp-login.php?redirect_to=http%3A%2F%2F10.10.18.53%2F&reauth=1");
 	      
 	      return driver;
 	   
