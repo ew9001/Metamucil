@@ -47,6 +47,11 @@ public class Rotate {
 		String data="" + local + "/" + "mobileSample.csv";	
 		String data2="" + local + "/" + "mobileSample.csv";	
 		String myTitle;
+		int x=585;
+		int y= 1024;
+		int count = 1;
+		
+		
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
 	  @Test(groups = {"create"})
@@ -197,7 +202,7 @@ public class Rotate {
 			  driver=tabletIpad4thGen7();
 			}
 		  
-		  String name=""+ browser+"/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		  String name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
 		 
 			  System.out.println("Let me see which one get tested " +browser);
 			  System.out.println("Image Name " +name);
@@ -224,14 +229,17 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).clear();
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
-		    driver.manage().window().setSize(new Dimension(585, 1024));
+		    while (count < 11) {
+		    driver.manage().window().setSize(new Dimension(x, y));
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    
 		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
 				        System.out.println("Image Name " +name);
 				        takeScreenPortrait(name);
+				        y+=10;
+				        count+=1;
 		       
-	
+		    }
 		 
 	    	 driver.quit();   
 		
