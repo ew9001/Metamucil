@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -234,7 +235,8 @@ public class Rotate {
 		    	   
 		    	   System.out.println("X is  " +x);
 		    	   System.out.println("Y is  " +y);
-		    driver.manage().window().setSize(new Dimension(x, y));
+		    
+		    driver.manage().window().setPosition(new Point(x, y));
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
