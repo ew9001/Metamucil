@@ -294,7 +294,7 @@ public class Rotate {
 		 caps.setCapability("resolution", "1024x768");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run ie10");
-	      browser_type="mobileGalaxyS3";
+	      browser_type="ie10";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
