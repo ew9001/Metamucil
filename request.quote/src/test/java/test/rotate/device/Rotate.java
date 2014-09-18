@@ -47,7 +47,7 @@ public class Rotate {
 		String data="" + local + "/" + "mobileSample.csv";	
 		String data2="" + local + "/" + "mobileSample.csv";	
 		String myTitle;
-		int x=585;
+		int x=285;
 		int y= 1024;
 		int count = 1;
 		
