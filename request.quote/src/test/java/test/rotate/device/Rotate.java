@@ -78,8 +78,8 @@ public class Rotate {
 			  System.out.println("Data is  " +data2);
 			}
 		  
-		  else if (browser.equals("ie10")) {
-			  driver=  ie10();
+		  else if (browser.equals("browserie10")) {
+			  driver=  browserie10();
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
@@ -216,7 +216,7 @@ public class Rotate {
 		    int lineNumber = 0;
 
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
-		    driver.get("http://10.10.18.53/");
+		    driver.get("http://10.10.18.53:80");
 		    driver.findElement(By.id("user_pass")).clear();
 		    driver.findElement(By.id("user_pass")).sendKeys("Urgr8!1978");
 		    driver.findElement(By.id("user_login")).clear();
@@ -281,7 +281,7 @@ public class Rotate {
 	      
 	 }  
 	 
-	 public WebDriver ie10() throws MalformedURLException  
+	 public WebDriver browserie10() throws MalformedURLException  
 	 {  
 	  
 		 System.out.println("Let me run ie10");
@@ -294,7 +294,7 @@ public class Rotate {
 		 caps.setCapability("resolution", "1024x768");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run ie10");
-	      browser_type="ie10";
+	      browser_type="browserie10";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
