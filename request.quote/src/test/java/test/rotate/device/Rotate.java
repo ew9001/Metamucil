@@ -741,7 +741,7 @@ public class Rotate {
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
-		 caps.setCapability("browserstack.local", "true");
+		 //caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
