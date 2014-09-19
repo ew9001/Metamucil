@@ -92,6 +92,12 @@ public class Rotate {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("browserie8")) {
+			  driver=  browserie8();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
 		  else if (browser.equals("tabletGoogleNexus")) {
 			  driver=  tabletGoogleNexus();
 			  csvFileToRead = data2;
@@ -310,6 +316,8 @@ public class Rotate {
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run ie10");
 	      browser_type="browserie10";
@@ -562,7 +570,8 @@ public class Rotate {
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
-
+		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -758,6 +767,29 @@ public class Rotate {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "IE");
 		 caps.setCapability("browser_version", "9.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.debug", "true");
+		 //caps.setCapability("acceptSslCerts", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run IE9");
+	      driver.get("http://10.10.18.53/wordpress/wp-login.php?redirect_to=http%3A%2F%2F10.10.18.53%2F&reauth=1");
+	      
+	      return driver;
+	   
+	    
+	 }
+	 
+	 public WebDriver browserIE8() throws MalformedURLException  
+	 {  
+	  
+		
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "IE");
+		 caps.setCapability("browser_version", "8.0");
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
