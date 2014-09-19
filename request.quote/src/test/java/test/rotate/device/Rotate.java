@@ -93,7 +93,7 @@ public class Rotate {
 			}
 		  
 		  else if (browser.equals("browserie8")) {
-			  driver=  browserIE8();
+			  driver=  browserie8();
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
@@ -782,7 +782,7 @@ public class Rotate {
 	    
 	 }
 	 
-	 public WebDriver browserIE8() throws MalformedURLException  
+	 public WebDriver browserie8() throws MalformedURLException  
 	 {  
 	  
 		

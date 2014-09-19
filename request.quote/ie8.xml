@@ -3,7 +3,7 @@
 <suite name="Examples" verbose="1">
     <parameter name="param" value="Laramie"/>
     <test name="ObjectExitTest simple example">
-        <parameter name="browser" value="ie8"/>
+        <parameter name="browser" value="browserie8"/>
         <classes>
             <class name="test.rotate.device.Rotate"/>
         </classes>
