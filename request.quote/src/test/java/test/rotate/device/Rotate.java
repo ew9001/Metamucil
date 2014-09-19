@@ -92,6 +92,13 @@ public class Rotate {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("browserChrome")) {
+			  driver=  browserChrome();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
+		  
 		  else if (browser.equals("browserie8")) {
 			  driver=  browserie8();
 			  csvFileToRead = data2;
