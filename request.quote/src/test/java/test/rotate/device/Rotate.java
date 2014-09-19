@@ -48,8 +48,8 @@ public class Rotate {
 		String data="" + local + "/" + "mobileSample.csv";	
 		String data2="" + local + "/" + "mobileSample.csv";	
 		String myTitle;
-		int x=3547;
-		int y= 1252;
+		int x=2560;
+		int y= 1440;
 		int count = 1;
 		
 		
@@ -231,8 +231,8 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
 		    while (count < 21) {
-		    	   x-=200;
-		    	   y-=200;
+		    	
+		    	   
 		    	   System.out.println("X is  " +x);
 		    	   System.out.println("Y is  " +y);
 		    driver.manage().window().setSize(new Dimension(x, y));
@@ -244,7 +244,7 @@ public class Rotate {
 		    name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
 				        System.out.println("Image Name " +name);
 				        takeScreenPortrait(name);
-				        
+				        x-=200;
 				        count+=1;
 		       
 		    }
