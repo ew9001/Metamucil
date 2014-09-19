@@ -93,7 +93,7 @@ public class Rotate {
 			}
 		  
 		  else if (browser.equals("browserie8")) {
-			  driver=  browserie8();
+			  driver=  browserIE8();
 			  csvFileToRead = data2;
 			  System.out.println("Data is  " +data2);
 			}
