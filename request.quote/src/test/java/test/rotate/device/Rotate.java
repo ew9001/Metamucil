@@ -232,7 +232,7 @@ public class Rotate {
 		    driver.findElement(By.id("wp-submit")).click();
 		    while (count < 21) {
 		    	   x-=200;
-		    	   
+		    	   y-=200;
 		    	   System.out.println("X is  " +x);
 		    	   System.out.println("Y is  " +y);
 		    driver.manage().window().setSize(new Dimension(x, y));
