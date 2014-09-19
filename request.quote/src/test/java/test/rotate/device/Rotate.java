@@ -594,8 +594,8 @@ public class Rotate {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Chrome");
 		 caps.setCapability("browser_version", "36.0");
-		 caps.setCapability("os", "Windows");
-		 caps.setCapability("os_version", "7");
+		 caps.setCapability("os", "OS X");
+		 caps.setCapability("os_version", "Mountain Lion");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("browserstack.debug", "true");
