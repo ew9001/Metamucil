@@ -578,6 +578,27 @@ public class Rotate {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver browserChrome() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="chrome";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "Chrome");
+		 caps.setCapability("browser_version", "36.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Chrome");
+	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	 }
+	 
 	 public WebDriver mobileiPhone4S() throws MalformedURLException  
 	 {  
 	  
