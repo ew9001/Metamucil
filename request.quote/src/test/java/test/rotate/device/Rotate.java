@@ -231,7 +231,7 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
 		    while (count < 11) {
-		    	   x-=10;
+		    	   x-=200;
 		    	   
 		    	   System.out.println("X is  " +x);
 		    	   System.out.println("Y is  " +y);
