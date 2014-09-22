@@ -55,6 +55,7 @@ public class Rotate {
 		int x=2560;
 		int y= 1440;
 		int count = 1;
+		int other =1 ;
 		
 		
 		String csvFileToRead;
@@ -230,7 +231,13 @@ public class Rotate {
 		  System.out.println("Let me run get driver "+driver);
 		  fail=""+ browser+"/Failed/" + timeStamp + "_" + "contact_us.png";
 			 
-		  
+		  name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
+	        System.out.println("Image Name " +name);
+	        takeScreenPortrait(name);
+	        
+	        name=""+ browser+"/" + browser +"_"+ other + "_" + x + "_"+ y + ".png";
+	        System.out.println("Image Name " +name);
+	        takeScreenLandscape(name);
 		  
 		 
 		    BufferedReader br =null;
@@ -362,28 +369,31 @@ public class Rotate {
 	      return driver;
 	 }
 	 
-	 public WebDriver  mobileHTCOneX() throws MalformedURLException  
+
+	 public WebDriver mobileHTCOneX() throws MalformedURLException  
 	 {  
 	  
 		 browser_type=" mobileHTCOneX";
-		  DesiredCapabilities caps = new DesiredCapabilities();
-		    caps.setCapability("browserName", "android");
-		    caps.setCapability("platform", "ANDROID");
-		    caps.setCapability("device", "HTC One X");
-		    caps.setCapability("browserstack.debug", "true");
-		    caps.setCapability("rotatable", true);
-		 
-		    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
-		    
-		    WebDriver augmentedDriver = new Augmenter().augment(driver);
-		    ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
-		    
-		    driver.get("http://www.yahoo.com");
-		  
-		    
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Sony Xperia Tipo");
+		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("rotatable", true);
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Chrome");
+	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
 	      
 	      return driver;
 	 }
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	 public WebDriver mobileRazor() throws MalformedURLException  
 	 {  
@@ -882,12 +892,12 @@ public class Rotate {
 	 }
 
 	 
-	 public WebDriver takeScreenPortrait(String name) throws IOException
+	 public WebDriver takeScreenLandscape(String name) throws IOException
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		 // System.out.println("Let me Rotate ");
-		// ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		  System.out.println("Let me Rotate ");
+		((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
@@ -908,7 +918,32 @@ public class Rotate {
 		    
 		    return driver;
 	 }
-	
+	 public WebDriver takeScreenPortrait(String name) throws IOException
+	 {
+		
+		 WebDriver augmentedDriver = new Augmenter().augment(driver);
+		  System.out.println("Let me Rotate ");
+		((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
+	     System.out.println("Let me take a screenshot " +name);
+	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	     System.out.println("I want to rotate");
+	    
+		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
+		  
+		    myTitle = driver.getTitle();
+		    
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    FileUtils.copyFile(screenshot, new File(name));
+		    
+		    return driver;
+	 }
 	 
 	 
 	 @AfterMethod(alwaysRun = true, description = "take screenshot on fails") 
