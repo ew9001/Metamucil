@@ -377,7 +377,9 @@ public class Rotate {
 	      System.out.println("Let me run mobileHTCOneX");
 	      WebDriver augmentedDriver = new Augmenter().augment(driver);
 		  System.out.println("Let me Rotate ");
+		  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      driver.get("http://google.com");
 	      
 	      return driver;
