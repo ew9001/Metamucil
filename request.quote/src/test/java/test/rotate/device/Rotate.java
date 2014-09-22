@@ -379,12 +379,7 @@ public class Rotate {
 		    ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 		    
 		    driver.get("http://www.yahoo.com");
-		    WebElement element = driver.findElement(By.name("q"));
-		 
-		    element.sendKeys("BrowserStack");
-		    element.submit();
-		 
-		    System.out.println(driver.getTitle());
+		  
 		    
 	      
 	      return driver;
