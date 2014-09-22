@@ -371,8 +371,7 @@ public class Rotate {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "HTC One X");
 		 caps.setCapability("browserstack.debug", "true");
-		 caps.setCapability(CapabilityType.ROTATABLE, true);
-		 
+		 caps.setCapability("rotatable", true);
 		 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileHTCOneX");
