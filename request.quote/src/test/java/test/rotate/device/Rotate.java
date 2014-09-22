@@ -375,6 +375,9 @@ public class Rotate {
 		 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileHTCOneX");
+	      WebDriver augmentedDriver = new Augmenter().augment(driver);
+		  System.out.println("Let me Rotate ");
+		 ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	      driver.get("http://google.com");
 	      
 	      return driver;
@@ -881,8 +884,8 @@ public class Rotate {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		  System.out.println("Let me Rotate ");
-		 ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		 // System.out.println("Let me Rotate ");
+		// ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
