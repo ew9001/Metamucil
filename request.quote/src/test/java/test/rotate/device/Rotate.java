@@ -259,7 +259,7 @@ public class Rotate {
 		    	   
 		    	   System.out.println("X is  " +x);
 		    	   System.out.println("Y is  " +y);
-		    driver.manage().window().setSize(new Dimension(x, y));
+		//    driver.manage().window().setSize(new Dimension(x, y));
 		  
 		    
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
