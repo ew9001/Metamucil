@@ -378,7 +378,7 @@ public class Rotate {
 		    WebDriver augmentedDriver = new Augmenter().augment(driver);
 		    ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 		    
-		    driver.get("http://www.google.com/ncr");
+		    driver.get("http://www.yahoo.com");
 		    WebElement element = driver.findElement(By.name("q"));
 		 
 		    element.sendKeys("BrowserStack");
