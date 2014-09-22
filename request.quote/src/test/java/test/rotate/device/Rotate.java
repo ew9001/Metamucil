@@ -372,15 +372,11 @@ public class Rotate {
 		    caps.setCapability("device", "HTC One X");
 		    caps.setCapability("browserstack.debug", "true");
 		    caps.setCapability("rotatable", true);
+		    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
 		    
-		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run mobileHTCOneX");
-	      WebDriver augmentedDriver = new Augmenter().augment(driver);
-		  System.out.println("Let me Rotate ");
-		  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		 ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
-		 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	      driver.get("http://google.com");
+		    WebDriver augmentedDriver = new Augmenter().augment(driver);
+		    ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		    
 	      
 	      return driver;
 	 }
