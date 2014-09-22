@@ -368,11 +368,11 @@ public class Rotate {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
-		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "HTC One X");
-		 caps.setCapability("browserstack.debug", "true");
-		 caps.setCapability("rotatable", true);
-		 
+		    caps.setCapability("platform", "ANDROID");
+		    caps.setCapability("device", "HTC One X");
+		    caps.setCapability("browserstack.debug", "true");
+		    caps.setCapability("rotatable", true);
+		    
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileHTCOneX");
 	      WebDriver augmentedDriver = new Augmenter().augment(driver);
