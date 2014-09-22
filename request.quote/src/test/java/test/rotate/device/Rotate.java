@@ -266,10 +266,15 @@ public class Rotate {
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
-				        System.out.println("Image Name " +name);
-				        takeScreenPortrait(name);
+	        System.out.println("Image Name " +name);
+	        takeScreenPortrait(name);
+	        
+	        name=""+ browser+"/" + browser +"_"+ other + "_" + x + "_"+ y + ".png";
+	        System.out.println("Image Name " +name);
+	        takeScreenLandscape(name);
 				        x-=200;
 				        count+=1;
+				        other+=1;
 		       
 		    }
 		 
