@@ -378,12 +378,12 @@ public class Rotate {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Sony Xperia Tipo");
+		 caps.setCapability("device", "HTC One X");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("rotatable", true);
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://m.crest.com");
 	      
 	      
 	      return driver;
