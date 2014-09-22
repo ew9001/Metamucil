@@ -21,6 +21,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.android.AndroidDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.CapabilityType;
@@ -365,17 +366,25 @@ public class Rotate {
 	 {  
 	  
 		 browser_type=" mobileHTCOneX";
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities caps = new DesiredCapabilities();
-		 caps.setCapability("browserName", "android");
+		  DesiredCapabilities caps = new DesiredCapabilities();
+		    caps.setCapability("browserName", "android");
 		    caps.setCapability("platform", "ANDROID");
 		    caps.setCapability("device", "HTC One X");
 		    caps.setCapability("browserstack.debug", "true");
 		    caps.setCapability("rotatable", true);
+		 
 		    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
 		    
 		    WebDriver augmentedDriver = new Augmenter().augment(driver);
 		    ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		    
+		    driver.get("http://www.google.com/ncr");
+		    WebElement element = driver.findElement(By.name("q"));
+		 
+		    element.sendKeys("BrowserStack");
+		    element.submit();
+		 
+		    System.out.println(driver.getTitle());
 		    
 	      
 	      return driver;
