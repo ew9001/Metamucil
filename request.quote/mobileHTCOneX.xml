@@ -7,7 +7,7 @@
         <parameter name="browser" value="mobileHTCOneX"/>
         <classes>
           
-            <class name="test.rotate.device.Rotate"/>
+            <class name="test.lgnews.run.testPostLive"/>
         </classes>
  
         <groups>

@@ -14,6 +14,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Rotatable;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
@@ -224,7 +226,11 @@ public class testPostLive {
 			    	Thread.sleep(1000);
 			    }
 
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
+		        takeScreenLandscape(name);
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
@@ -770,16 +776,54 @@ public class testPostLive {
 	 }
 
 	 
+	 public WebDriver takeScreenLandscape(String name) throws IOException
+	 {
+		
+		 WebDriver augmentedDriver = new Augmenter().augment(driver);
+		  System.out.println("Let me Rotate ");
+		((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+	     System.out.println("Let me take a screenshot " +name);
+	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	     System.out.println("I want to rotate");
+	    
+		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
+		  
+		    myTitle = driver.getTitle();
+		    
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    FileUtils.copyFile(screenshot, new File(name));
+		    
+		    return driver;
+	 }
 	 public WebDriver takeScreenPortrait(String name) throws IOException
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
+		  System.out.println("Let me Rotate ");
+		((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	     System.out.println("I want to rotate");
+	    
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
-		   
+		  
 		    myTitle = driver.getTitle();
-		   
+		    
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		    
+		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    FileUtils.copyFile(screenshot, new File(name));
 		    
 		    return driver;
