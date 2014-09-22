@@ -386,6 +386,7 @@ public class Rotate {
 		 caps.setCapability("device", "HTC One X");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("rotatable", true);
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://m.crest.com");
