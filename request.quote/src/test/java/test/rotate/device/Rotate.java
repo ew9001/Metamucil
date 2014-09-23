@@ -49,8 +49,8 @@ public class Rotate {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "mobileSample.csv";	
-		String data2="" + local + "/" + "mobileSample.csv";	
+		String data="" + local + "/" + "pubhub.csv";	
+		String data2="" + local + "/" + "pubhub.csv";	
 		String myTitle;
 		int x=2560;
 		int y= 1440;
@@ -254,29 +254,43 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).clear();
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
-		    while (count < 5) {
-		    	
-		    	   
-		    	   System.out.println("X is  " +x);
-		    	   System.out.println("Y is  " +y);
-		//    driver.manage().window().setSize(new Dimension(x, y));
-		  
-		    
-		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		    name=""+ browser+"/" + browser +"_"+ counter + "_" + x + "_"+ y + ".png";
-	        System.out.println("Image Name " +name);
-	        takeScreenPortrait(name);
-	        
-	        name=""+ browser+"/" + browser +"_"+ other + "_" + x + "_"+ y + ".png";
-	        System.out.println("Image Name " +name);
-	        takeScreenLandscape(name);
-				        x-=200;
-				        count+=1;
-				        other+=1;
+		    while ((line = br.readLine()) != null) {
+			  	  
+		        System.out.println("The URL is " + counter);
+		        String [] nextLine = line.split(",");
+		        // nextLine[] is an array of values from the line
+		        System.out.println(nextLine[lineNumber]);
+		        url=nextLine[lineNumber];
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        System.out.println("The URL is " + url);	
+		        System.out.println("Image Name " +name);
+		        driver.get(url);
+		        for (int second = 0;; second++) {
+			    	if (second >= 60);
+			    	try { if ("div.copyright".equals(driver.findElement(By.cssSelector("div.copyrigh")).getText())) break; } catch (Exception e) {}
+			    	Thread.sleep(1000);
+			    }
+
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		        takeScreenPortrait(name);
+		        System.out.println("Image Name " +name);
+		        
+		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		       
-		    }
+		        
+		     //   if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
+		       // {
+		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
+		       // jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
+		       // 	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		       // 	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
+				//        System.out.println("Image Name " +name);
+				//        takeScreenPortrait(name);
+		       // }
+		        counter+=1;
+		    
+
+		      }
 		 
 	    	 driver.quit();   
 		
