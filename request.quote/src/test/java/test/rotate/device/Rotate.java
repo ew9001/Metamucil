@@ -250,7 +250,7 @@ public class Rotate {
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
 		    driver.get("http://10.10.18.53/");
 		    driver.findElement(By.id("user_pass")).clear();
-		    driver.findElement(By.id("user_pass")).sendKeys("Urgr8!1978");
+		    driver.findElement(By.id("user_pass")).sendKeys("Ag-102478");
 		    driver.findElement(By.id("user_login")).clear();
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
