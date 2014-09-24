@@ -916,8 +916,8 @@ public class Rotate {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		  System.out.println("Let me Rotate ");
-		((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		//  System.out.println("Let me Rotate ");
+		//((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
@@ -942,8 +942,8 @@ public class Rotate {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		  System.out.println("Let me Rotate ");
-		((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
+		//  System.out.println("Let me Rotate ");
+		//((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
