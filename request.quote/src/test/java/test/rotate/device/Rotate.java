@@ -254,7 +254,6 @@ public class Rotate {
 		    driver.findElement(By.id("user_login")).clear();
 		    driver.findElement(By.id("user_login")).sendKeys("agolubev1");
 		    driver.findElement(By.id("wp-submit")).click();
-		    driver.findElement(By.id("wp-submit")).click();
 		    driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		    while ((line = br.readLine()) != null) {
 			  	  
