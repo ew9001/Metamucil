@@ -620,6 +620,7 @@ public class Rotate {
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
