@@ -267,11 +267,11 @@ public class Rotate {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		       // for (int second = 0;; second++) {
-			    //	if (second >= 60);
-			    	//try { if ("div.copyright".equals(driver.findElement(By.cssSelector("div.copyrigh")).getText())) break; } catch (Exception e) {}
-			    //	Thread.sleep(1000);
-			    //}
+		        for (int second = 0;; second++) {
+			    	if (second >= 60);
+			    	try { if ("div.copyright".equals(driver.findElement(By.cssSelector("div.copyrigh")).getText())) break; } catch (Exception e) {}
+			    	Thread.sleep(1000);
+			    }
 
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
@@ -920,7 +920,7 @@ public class Rotate {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		//  System.out.println("Let me Rotate ");
+		//  System.out.println(" ");
 		//((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
