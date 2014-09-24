@@ -707,6 +707,7 @@ public class Rotate {
 		 iPhoneCaps.setCapability("device", "iPhone 5");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
