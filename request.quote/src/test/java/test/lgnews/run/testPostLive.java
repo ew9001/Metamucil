@@ -32,11 +32,16 @@ import org.testng.annotations.Test;
 
 public class testPostLive {
 	 private static WebDriver driver;
-	  public static final String USERNAME = "earlwillis1";
+	 
+	 public static final String USERNAME = "zaqwsx1";
+	  public static final String AUTOMATE_KEY = "Fs54nwmULt7BaSTosZxi";
+	  public static final String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+	 
+	 
 	  public String browser_type;
 	  public String fail,error,url,rotate;
 	  public String baseUrl = "http://stage.coffee-mate.com";
-		public static final String AUTOMATE_KEY = "XsPyFTirN4mH8aCLMB9A";
+		
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
