@@ -49,8 +49,8 @@ public class Rotate {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "pubhub.csv";	
-		String data2="" + local + "/" + "pubhub.csv";	
+		String data="" + local + "/" + "metawellness.csv";	
+		String data2="" + local + "/" + "metawellness.csv";	
 		String myTitle;
 		int x=2560;
 		int y= 1440;
