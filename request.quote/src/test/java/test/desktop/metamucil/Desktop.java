@@ -166,6 +166,11 @@ public class Desktop {
 			   csvFileToRead = data2;
 			}
 		  
+		  else if (browser.equals("browserIE7")) {
+			  driver=browserIE7();
+			   csvFileToRead = data2;
+			}
+		  
 		  else if (browser.equals("browserie10")) {
 			  driver=browserie10();
 			   csvFileToRead = data2;
@@ -756,6 +761,27 @@ public class Desktop {
 	    
 	 }
 	 
+	 public WebDriver browserIE7() throws MalformedURLException  
+	 {  
+	  
+		
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "IE");
+		 caps.setCapability("browser_version", "7.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "XP");
+		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.local", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run IE7");
+	      driver.get("http://google.com");
+	      
+	      return driver;
+	   
+	    
+	 }
+	 
 	 public WebDriver browserie10() throws MalformedURLException  
 	 {  
 	  
@@ -787,7 +813,7 @@ public class Desktop {
 		 caps.setCapability("browser_version", "8.0");
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
-		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("resolution", "1024x768");  
 		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE8");
