@@ -175,7 +175,7 @@ public class Desktop {
 		  else if (browser.equals("iPad")) {
 			  driver=browserIpad();
 			}
-		  else if (browser.equals("firefox")) {
+		  else if (browser.equals("browserFirefox")) {
 			  driver=browserFirefox();
 			  csvFileToRead = data2;
 			}
@@ -533,18 +533,18 @@ public class Desktop {
 	 public WebDriver browserFirefox() throws MalformedURLException  
 	 {  
 	  
-		 browser_type="chrome";
+		 browser_type="firefox";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Firefox");
-		 caps.setCapability("browser_version", "31.0");
-		 caps.setCapability("os", "Windows");
-		 caps.setCapability("os_version", "7");
+		 caps.setCapability("browser_version", "30.0");
+		 caps.setCapability("os", "OS X");
+		 caps.setCapability("os_version", "Mountain Lion");
 		 caps.setCapability("resolution", "1024x768");
-
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      System.out.println("Let me run Firefox");
+	      driver.get("http://google.com");
 	      
 	      return driver;
 	 }
@@ -725,6 +725,9 @@ public class Desktop {
 	   
 	    
 	 }
+	 
+	 
+	    
 	    
 
 	 
