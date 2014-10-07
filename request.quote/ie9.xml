@@ -5,7 +5,7 @@
     <test name="ObjectExitTest simple example">
         <parameter name="browser" value="ie9"/>
         <classes>
-            <class name="test.rotate.device.Rotate"/>
+            <class name="test.desktop.metamucil.Desktop"/>
         </classes>
  
         <groups>
