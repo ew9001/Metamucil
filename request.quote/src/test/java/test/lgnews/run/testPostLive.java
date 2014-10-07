@@ -9,7 +9,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
-
+import static org.testng.Assert.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -225,11 +225,13 @@ public class testPostLive {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		        for (int second = 0;; second++) {
-			    	if (second >= 60);
-			    	try { if ("© 2014. Procter & Gamble. All rights reserved. All claims valid only in the US.\nP&G. Proud Partner of the U.S. Olympic Team. 36 USC 220508".equals(driver.findElement(By.cssSelector("div.copyRights > div.text.mode1 > div")).getText())) break; } catch (Exception e) {}
-			    	Thread.sleep(1000);
-			    }
+		       // for (int second = 0;; second++) {
+			    //	if (second >= 60);
+			    	//try { if ("© 2014 Procter & Gamble".equals(driver.findElement(By.cssSelector("div.copyRights > div.text.mode1 > div")).getText())) break; } catch (Exception e) {}
+			    	//Thread.sleep(1000);
+			    //} changed
+		        
+		       
 
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
