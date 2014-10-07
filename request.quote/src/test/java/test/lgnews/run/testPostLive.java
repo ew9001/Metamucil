@@ -391,6 +391,7 @@ public class testPostLive {
 		 caps.setCapability("device", "Google Nexus 7");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
+		    caps.setCapability("browserstack.local", "true");
 	      System.out.println("Let me run tabletGoogleNexus");
 	      driver.get("http://m.yahoo.com");
 	      
