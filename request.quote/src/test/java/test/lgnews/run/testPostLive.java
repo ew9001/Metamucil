@@ -646,10 +646,11 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("device", "LG Nexus 4");
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run LG Nexus 4");
-	      driver.get("http://m.crest.com");
+	      driver.get("http://m.uat.metawellness.pgsitecore.com");
 
 	      
 	      
