@@ -161,7 +161,7 @@ public class Desktop {
 			  csvFileToRead = data2;
 			}
 		  
-		  else if (browser.equals("ie9")) {
+		  else if (browser.equals("browserIE9")) {
 			  driver=browserIE9();
 			   csvFileToRead = data2;
 			}
