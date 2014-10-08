@@ -247,7 +247,7 @@ public class Iphone {
 		       
 
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
+		  
 		        System.out.println("Image Name " +name);
 		       
 		        takeScreenPortrait(name);
@@ -569,6 +569,7 @@ public class Iphone {
 		 iPhoneCaps.setCapability("platform", "MAC");
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
@@ -860,8 +861,8 @@ public class Iphone {
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-		  System.out.println("Let me Rotate ");
-		((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		//  System.out.println("Let me Rotate ");
+		//((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 	     System.out.println("Let me take a screenshot " +name);
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     System.out.println("I want to rotate");
