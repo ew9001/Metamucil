@@ -328,6 +328,7 @@ public class Rotate {
 		 caps.setCapability("device", "Samsung Galaxy S III");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("rotatable", true);
+		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
