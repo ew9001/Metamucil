@@ -560,28 +560,20 @@ public class Iphone {
 	 public WebDriver mobileiPhone4S() throws MalformedURLException  
 	 {  
 	  
+		
+
 		 browser_type="iPhone4S";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities  iPhoneCaps = new DesiredCapabilities();
-		
-		
-		 
+		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
 		 iPhoneCaps.setCapability("browserName", "iPhone");
 		 iPhoneCaps.setCapability("platform", "MAC");
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
-		// iPhoneCaps.setCapability("rotatable", true);
-		 iPhoneCaps.setCapability("deviceOrientation","landscape");
-		 
-
-
-		 
-		    driver = new RemoteWebDriver(new URL(URL),  iPhoneCaps);
+		 iPhoneCaps.setCapability("rotatable", true);
+		
+		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 4S");
-	     
-
-	      driver.get("http://yandex.com");
 	      
 	      
 	      return driver;
