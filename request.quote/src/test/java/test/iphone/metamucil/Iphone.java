@@ -254,15 +254,15 @@ public class Iphone {
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		       
 		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
-		        {
-		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
-				        System.out.println("Image Name " +name);
-				        takeScreenPortrait(name);
-		        }
+		      //  if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
+		        //{
+		       // 	JavascriptExecutor jse = (JavascriptExecutor)driver;
+		       // jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
+		       // 	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		       // 	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
+				//        System.out.println("Image Name " +name);
+				  //      takeScreenPortrait(name);
+		       // }
 		        counter+=1;
 		    
 
@@ -618,6 +618,7 @@ public class Iphone {
 		 iPhoneCaps.setCapability("device", "iPhone 5");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("browserstack.local", "true");
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);

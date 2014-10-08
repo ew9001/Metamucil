@@ -6,7 +6,7 @@
     <test name="ObjectExitTest simple example">
         <parameter name="browser" value="mobileiPhone5"/>
         <classes>
-            <class name="test.lgnews.run.testPostLive"/>
+            <class name="test.iphone.metamucil.Iphone"/>
         </classes>
  
         <groups>
