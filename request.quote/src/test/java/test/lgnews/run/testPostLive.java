@@ -81,6 +81,12 @@ public class testPostLive {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("mobileGalaxyS2")) {
+			  driver=  mobileGalaxyS2();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
 		  else if (browser.equals("tabletGoogleNexus")) {
 			  driver=  tabletGoogleNexus();
 			  csvFileToRead = data2;
@@ -513,6 +519,25 @@ public class testPostLive {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver mobileGalaxyS2() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="mobileRazor";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Samsung Galaxy S2");
+		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("browserstack.local", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Samsung Galaxy S2");
+	     
+	      
+	      return driver;
+	 }
+	 
 	 
 	 public WebDriver mobileGalaxyNote2() throws MalformedURLException  
 	 {  
