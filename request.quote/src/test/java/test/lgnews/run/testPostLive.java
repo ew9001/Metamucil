@@ -300,6 +300,7 @@ public class testPostLive {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("rotatable", true);
+		 caps.setCapability("acceptSslCerts", "true");
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
@@ -327,6 +328,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Sony Xperia Tipo");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -345,6 +347,7 @@ public class testPostLive {
 		 caps.setCapability("device", "HTC One X");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileHTCOneX");
 	      driver.get("http://google.com");
@@ -362,6 +365,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Motorola Razr Maxx HD");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazor");
 	      driver.get("http://m.yahoo.com");
@@ -379,6 +383,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Amazon Kindle Fire 2");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFire2");
 	      driver.get("http://m.yahoo.com");
@@ -397,6 +402,7 @@ public class testPostLive {
 		 caps.setCapability("device", "Google Nexus 7");
 		 caps.setCapability("browserstack.debug", "true");
 		  caps.setCapability("browserstack.local", "true");
+		  caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 		  
 	      System.out.println("Let me run tabletGoogleNexus");
@@ -414,6 +420,7 @@ public class testPostLive {
 		 caps.setCapability("browserName", "iPad");
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad Air");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletIpadAir");
 	    
@@ -431,6 +438,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad mini Retina");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletIpadRetina");
 	   
@@ -447,6 +455,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad 4th Gen");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run in tablet Ipad4thGen7");
 	     
@@ -463,6 +472,7 @@ public class testPostLive {
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Amazon Kindle Fire HD 8.9");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFireHD");
 	      driver.get("http://m.yahoo.com");
@@ -479,6 +489,7 @@ public class testPostLive {
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy Note 10.1");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletKindleFireHD");
 	     
@@ -496,6 +507,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Motorola Atrix HD");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobile AtrixHD");
 	     
@@ -513,6 +525,7 @@ public class testPostLive {
 		 caps.setCapability("device", "Motorola Razr Maxx HD");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileRazorHD");
 	     
@@ -551,6 +564,7 @@ public class testPostLive {
 		 caps.setCapability("device", "Samsung Galaxy Note II");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run GalaxyNote 2");
 	     
@@ -569,6 +583,7 @@ public class testPostLive {
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("acceptSslCerts", "true");
 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
@@ -590,6 +605,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
+		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		 
 
 
@@ -617,6 +633,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
+		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
@@ -637,7 +654,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
-		
+		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5");
@@ -659,7 +676,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
-		
+		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5C");
@@ -680,6 +697,7 @@ public class testPostLive {
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("browserstack.local", "true");
+		 iPhoneCaps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run LG Nexus 4");
@@ -701,6 +719,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy Nexus");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 		    
 	      System.out.println("Let me run mobileGalaxyNexus");
@@ -722,6 +741,7 @@ public class testPostLive {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "HTC Evo 3D");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 		    
 	      System.out.println("Let me run HTC Eveo 3D");
@@ -744,6 +764,7 @@ public class testPostLive {
 		 caps.setCapability("os", "OS X");
 		 caps.setCapability("os_version", "Lion");
 		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -766,7 +787,7 @@ public class testPostLive {
 		 caps.setCapability("os", "Windows");
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
-
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -785,7 +806,7 @@ public class testPostLive {
 		 caps.setCapability("browserName", "iPad");
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad 3rd (7.0)");
-
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Ipad");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -804,7 +825,7 @@ public class testPostLive {
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy Note 10.1");
-
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Android");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
