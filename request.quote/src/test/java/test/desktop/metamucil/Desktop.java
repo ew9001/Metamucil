@@ -727,6 +727,8 @@ public class Desktop {
 		 caps.setCapability("os", "OS X");
 		 caps.setCapability("os_version", "Lion");
 		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("acceptSslCerts", "true");
+		 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
@@ -753,6 +755,7 @@ public class Desktop {
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
 	      driver.get("http://google.com");
@@ -774,6 +777,7 @@ public class Desktop {
 		 caps.setCapability("os_version", "XP");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE7");
 	      driver.get("http://google.com");
@@ -795,6 +799,7 @@ public class Desktop {
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE10");
 	      driver.get("http://google.com");
@@ -816,6 +821,7 @@ public class Desktop {
 		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");  
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE8");
 	      driver.get("http://google.com");
