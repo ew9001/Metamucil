@@ -531,6 +531,7 @@ public class testPostLive {
 		 caps.setCapability("device", "Samsung Galaxy S2");
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Samsung Galaxy S2");
 	     
