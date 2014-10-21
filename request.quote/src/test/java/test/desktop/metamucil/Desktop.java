@@ -547,8 +547,8 @@ public class Desktop {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Firefox");
 		 caps.setCapability("browser_version", "30.0");
-		 caps.setCapability("os", "OS X");
-		 caps.setCapability("os_version", "Mountain Lion");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.local", "true");
 		 caps.setCapability("acceptSslCerts", "true");
