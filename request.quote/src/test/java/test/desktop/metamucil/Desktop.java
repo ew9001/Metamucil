@@ -554,6 +554,7 @@ public class Desktop {
 		 caps.setCapability("acceptSslCerts", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
+	      driver.manage().window().maximize();
 	      driver.get("http://google.com");
 	      
 	      return driver;
