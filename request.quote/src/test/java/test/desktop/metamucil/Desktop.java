@@ -241,9 +241,10 @@ public class Desktop {
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        
-		       while (loop != 15) {
+		       while (loop < 15) {
 		        if(driver.findElements(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart"))!= null){
 		        	System.out.println("Element is Present");
+		        	System.out.println("The Loop is " + loop);	
 		        	driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		        	//  driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	}else{
