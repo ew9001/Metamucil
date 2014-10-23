@@ -245,7 +245,7 @@ public class Desktop {
 		        if(driver.findElements(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).size() != 0){
 		        	System.out.println("Element is Present");
 		        	driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
-		        	  driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        	//  driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		        	}else{
 		        	System.out.println("Element is Absent"); 
 		        	}
