@@ -244,8 +244,7 @@ public class Desktop {
 		        driver.get(url);
 		        
 		        try {
-		            Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Add To Cart[\\s\\S]*$"));
-		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		            Assert.assertEquals("Add To Cart", driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText());
 		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		            System.out.println("Adding to Cart ");
