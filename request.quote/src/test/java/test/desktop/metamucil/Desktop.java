@@ -241,12 +241,18 @@ public class Desktop {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		        boolean figa = driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")) != null;
-		        if (figa==true)
-		        {  
+		        
+		        
+		      
+			        for (int second = 0;; second++) {
+				   	if (second >= 60);
+				   try { if ("Add To Cart".equals(driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText())) break; } catch (Exception e) {}
+				   Thread.sleep(1000);
+				   } 
+		        
+		       
 		        	System.out.println("Adding to Cart ");
-		        	driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
-		        }
+		        
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
