@@ -93,6 +93,12 @@ public class testPostLive {
 			  System.out.println("Data is  " +data2);
 			}
 		  
+		  else if (browser.equals("mobileGalaxyS5Mini")) {
+			  driver=  mobileGalaxyS5Mini();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
+		  
 		  else if (browser.equals("tabletGoogleNexus")) {
 			  driver=  tabletGoogleNexus();
 			  csvFileToRead = data2;
@@ -372,6 +378,34 @@ public class testPostLive {
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
+	      browser_type="mobileGalaxyS3";
+	      System.out.println("Let me see which one get tested" +browser_type);
+	      System.out.println("Let me see which one get tested" +driver);
+	      driver.get("http://uat.metawellness.pgsitecore.com/en-us");
+	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	      System.out.println(data);
+	      return driver;
+	   
+	    
+	      
+	 } 
+	 
+	 public WebDriver mobileGalaxyS5Mini() throws MalformedURLException  
+	 {  
+	  
+		 System.out.println("Let me run mobileGalaxyS5Mini");
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Samsung Galaxy S5 Mini");
+		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("browserstack.local", "true");
+		 caps.setCapability("rotatable", true);
+		 caps.setCapability("acceptSslCerts", "true");
+		 caps.setCapability("deviceOrientation", "landscape");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Samsung Galaxy S5 Mini");
 	      browser_type="mobileGalaxyS3";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
