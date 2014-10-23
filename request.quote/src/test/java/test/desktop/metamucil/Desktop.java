@@ -246,9 +246,10 @@ public class Desktop {
 		        try {
 		            Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Add To Cart[\\s\\S]*$"));
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		        
 		            
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		          } catch (Error e) {
 		           // verificationErrors.append(e.toString());
 		          }
