@@ -248,7 +248,7 @@ public class Desktop {
 		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        
+		            System.out.println("Adding to Cart ");
 		            
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		         
@@ -257,7 +257,7 @@ public class Desktop {
 		          }
 		        
 		       
-		        	System.out.println("Adding to Cart ");
+		        	
 		        
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
