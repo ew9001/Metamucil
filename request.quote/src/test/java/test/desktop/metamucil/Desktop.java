@@ -18,6 +18,7 @@ import org.openqa.selenium.Rotatable;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -240,20 +241,12 @@ public class Desktop {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		        
-		       while (loop < 15) {
-		        if(driver.findElements(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart"))!= null){
-		        	System.out.println("Element is Present");
-		        	System.out.println("The Loop is " + loop);	
+		        boolean figa = driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")) != null;
+		        if (figa==true)
+		        {  
+		        	System.out.println("Adding to Cart ");
 		        	driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
-		        	//  driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        	}else{
-		        	System.out.println("Element is Absent"); 
-		        	}
-		        loop+=1;
-		        
-		       }
-
+		        }
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
 		        System.out.println("Image Name " +name);
