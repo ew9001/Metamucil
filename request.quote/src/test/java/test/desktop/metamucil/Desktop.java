@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Rotatable;
@@ -43,6 +44,7 @@ public class Desktop {
 		
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
+	    int loop = 0;
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "metawellness.csv";	
 		String data2="" + local + "/" + "metawellness.csv";	
@@ -238,13 +240,18 @@ public class Desktop {
 		        System.out.println("The URL is " + url);	
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
-		       // for (int second = 0;; second++) {
-			    //	if (second >= 60);
-			    	//try { if ("© 2014 Procter & Gamble".equals(driver.findElement(By.cssSelector("div.copyRights > div.text.mode1 > div")).getText())) break; } catch (Exception e) {}
-			    	//Thread.sleep(1000);
-			    //} changed
 		        
-		       
+		       while (loop != 15) {
+		        if(driver.findElements(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).size() != 0){
+		        	System.out.println("Element is Present");
+		        	driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		        	  driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+		        	}else{
+		        	System.out.println("Element is Absent"); 
+		        	}
+		        loop+=1;
+		        
+		       }
 
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 		        takeScreenPortrait(name);
