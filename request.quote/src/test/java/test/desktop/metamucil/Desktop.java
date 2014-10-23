@@ -22,6 +22,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -243,12 +244,11 @@ public class Desktop {
 		        driver.get(url);
 		        
 		        
-		      
-			        for (int second = 0;; second++) {
-				 	if (second >= 10);
-				  try { if ("Add To Cart".equals(driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText())) break; } catch (Exception e) {}
-				  Thread.sleep(1000);
-				  } 
+		        try {
+		            Assert.assertEquals("Add To Cart", driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText());
+		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		          } catch (Error e) {
+		         //   verificationErrors.append(e.toString());
 		        
 		       
 		        	System.out.println("Adding to Cart ");
