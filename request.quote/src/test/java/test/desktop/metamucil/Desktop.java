@@ -243,12 +243,12 @@ public class Desktop {
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        
-		        
 		        try {
 		            Assert.assertEquals("Add To Cart", driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText());
 		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		          } catch (Error e) {
-		         //   verificationErrors.append(e.toString());
+		           // verificationErrors.append(e.toString());
+		          }
 		        
 		       
 		        	System.out.println("Adding to Cart ");
