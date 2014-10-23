@@ -245,7 +245,7 @@ public class Desktop {
 		        
 		      
 			        for (int second = 0;; second++) {
-				   	if (second >= 60);
+				   	if (second >= 10);
 				   try { if ("Add To Cart".equals(driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText())) break; } catch (Exception e) {}
 				   Thread.sleep(1000);
 				   } 
