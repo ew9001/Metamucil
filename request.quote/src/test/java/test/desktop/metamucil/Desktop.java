@@ -242,7 +242,7 @@ public class Desktop {
 		        driver.get(url);
 		        
 		       while (loop != 15) {
-		        if(driver.findElements(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).size() != 0){
+		        if(driver.findElements(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart"))!= null){
 		        	System.out.println("Element is Present");
 		        	driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		        	//  driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
@@ -260,16 +260,7 @@ public class Desktop {
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		       
-		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
-		        {
-		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
-				        System.out.println("Image Name " +name);
-				        takeScreenPortrait(name);
-		        }
+		   
 		        counter+=1;
 		    
 
