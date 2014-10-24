@@ -250,7 +250,7 @@ public class Desktop {
 		            System.out.println("Adding to Cart ");
 		            
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		            
 		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		            System.out.println("I Clicked on Adding to Cart ");
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
@@ -258,6 +258,11 @@ public class Desktop {
 		           // verificationErrors.append(e.toString());
 		          }
 		        
+		        for (int second = 0;; second++) {
+		        	if (second >= 60) System.out.println("Not adding to cart");;
+		        	try { if ("Add To Cart".equals(driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText()))driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click(); break; } catch (Exception e) {}
+		        	Thread.sleep(1000);
+		        }
 		       
 		        	
 		        
