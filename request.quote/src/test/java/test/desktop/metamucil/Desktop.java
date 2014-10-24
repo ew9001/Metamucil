@@ -251,6 +251,9 @@ public class Desktop {
 		            
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		            System.out.println("I Clicked on Adding to Cart ");
+		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		          } catch (Error e) {
 		           // verificationErrors.append(e.toString());
 		          }
