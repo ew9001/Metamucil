@@ -245,12 +245,12 @@ public class Desktop {
 		        
 		        try {
 		            Assert.assertEquals("Add To Cart", driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).getText());
-		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
+		           
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
 		            System.out.println("Adding to Cart ");
 		            
 		            driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		         
+		            driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCart")).click();
 		          } catch (Error e) {
 		           // verificationErrors.append(e.toString());
 		          }
