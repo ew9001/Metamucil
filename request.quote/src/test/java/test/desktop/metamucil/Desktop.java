@@ -442,6 +442,7 @@ public class Desktop {
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad 4th Gen");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run in tablet Ipad4thGen7");
 	     

@@ -433,6 +433,7 @@ public class Iphone {
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad mini Retina");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletIpadRetina");
 	   
@@ -451,7 +452,7 @@ public class Iphone {
 		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("browserstack.local", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run in tablet Ipad4thGen7");
+	      System.out.println("Let me run in tablet  Ipad4thGen7");
 	     
 	      
 	      
